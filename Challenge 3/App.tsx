@@ -130,7 +130,7 @@ export default function App() {
 
           <button style = {{
 
-            fontSize:"16px",
+            fontSize:"15px",
             padding: "15px",
             fontWeight: "bold",
             borderRadius: "5px",
