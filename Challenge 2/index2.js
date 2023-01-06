@@ -49,14 +49,25 @@ const dropSol = async() => {
             new PublicKey(senderWallet.publicKey),
             2 * LAMPORTS_PER_SOL
         );
+        
+        /*
+        // Latest blockhash (unique identifer of the block) of the cluster
+        let latestBlockHash = await connection.getLatestBlockhash();
 
+    // Confirm transaction using the last valid block height (refers to its time)
+    // to check for transaction expiration
+        await connection.confirmTransaction({
+            blockhash: latestBlockHash.blockhash,
+            lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+            signature: fromAirDropSignature
+    });
         await connection.confirmTransaction(fromAirDropSignature);
     
         } catch (err){
           console.log(err);
     } 
 };
-
+*/
     const showWalletBalance = async () => {
 
         try{
