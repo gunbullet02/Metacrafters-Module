@@ -36,9 +36,14 @@ const dropSol = async() => {
 
         // Get Keypair from Secret Key
         var senderWallet = Keypair.fromSecretKey(DEMO_FROM_SECRET_KEY);
-
-    
-        // Aidrop 2 SOL to Sender wallet
+        
+         // Other things to try: 
+         // 1) Form array from userSecretKey
+         // const from = Keypair.fromSecretKey(Uint8Array.from(userSecretKey));
+         // 2) Make a new Keypair (starts with 0 SOL)
+         // const from = Keypair.generate();    
+        // Airdrop 2 SOL to Sender wallet
+        
         console.log('Airdopping some SOL to Sender wallet: ${senderWallet.publicKey}');
         const fromAirDropSignature = await connection.requestAirdrop(
             new PublicKey(senderWallet.publicKey),
